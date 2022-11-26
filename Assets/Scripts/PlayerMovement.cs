@@ -29,22 +29,21 @@ public class PlayerMovement : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
-    public void Attack(InputAction.CallbackContext context) 
+    public void Attack(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             Debug.Log("Works");
-            animator.Play("AttackAnimation");
-            animator.Play("AttackAnimation2");
+            animator.Play("NewAttack");
         }
     }
 
-    public void Attack2(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            Debug.Log("Works");
-            animator.Play("AttackAnimation2");
-        }
-    }
+    //public void Attack2(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //    {
+    //        Debug.Log("Works");
+    //        animator.Play("AttackAnimation2");
+    //    }
+    //}
 }
