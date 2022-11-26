@@ -187,46 +187,6 @@ MonoBehaviour:
     m_ActionId: f6c773e1-239e-446a-87d1-f9aea91c6888
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7f9b38eb-bfd3-4470-bfb6-bcf9d71a501f
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c9a4bc02-3f89-4471-8b07-1dddef8edd0b
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2861c352-2142-44ac-a2bc-2d403852910a
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ab8dbd5-47d9-4257-ac44-c406d5888537
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2d906126-e6a1-4bb4-9693-19f9d5067239
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cedb7175-1c36-4f6b-a2ae-3a10cb8439b6
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb560330-a2a4-4e51-86b0-239c6ed8df86
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 28b1c185-67ef-465e-a658-b8ecfa01f4f1
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4a98b8f7-7ee1-4a67-8c8d-38ddce46f9ec
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f4ea31f1-5ebd-4873-9c14-b94d59f22a15
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 51005529}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
@@ -494,7 +454,8 @@ GameObject:
   - component: {fileID: 130686772}
   - component: {fileID: 130686778}
   - component: {fileID: 130686780}
-  - component: {fileID: 130686779}
+  - component: {fileID: 130686782}
+  - component: {fileID: 130686781}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -543,46 +504,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 80ca08ba-9dc2-4e21-ae93-e7a442a18cba
     m_ActionName: Player/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1e991cf7-5042-4847-b086-93351c1343e6
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ab0256ba-be6a-426d-9af0-44274b0d1621
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4d9f2258-81d7-4b86-b08a-10b8367b2d53
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 53faff49-ae76-4127-99f8-7a5bbe5bee0c
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d811e76e-c2bb-4336-9d8c-8b0c10037d48
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 562d6a9e-54db-43b5-b7fc-4477dd724d99
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0944ec9e-d8e5-4a3c-9d3e-385d20962ef0
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 23c71b69-f093-4ad2-a177-2b491fecf0df
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6d014f92-c5f4-4706-87f2-f4be5c0244b0
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a09e99ef-b259-4260-9f0b-093605a09db3
-    m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 130686773}
@@ -666,9 +587,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.29842922, y: 0.25316644}
+    - - {x: 0.26370013, y: 0.11838128}
       - {x: 0, y: 0.5773587}
-      - {x: -0.2735439, y: 0.27076983}
+      - {x: -0.22492325, y: 0.18564248}
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
@@ -760,37 +681,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &130686779
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130686771}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.29674077, y: 0.26476407}
-      - {x: 0, y: 0.5773587}
-      - {x: -0.27520484, y: 0.27388692}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
 --- !u!114 &130686780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +695,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: 0
   UIDeathPrompt: {fileID: 933381777}
+--- !u!61 &130686781
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130686771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24483931, y: 0.16876936}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05884391, y: 0.13454008}
+  m_EdgeRadius: 0
+--- !u!61 &130686782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130686771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24483962, y: 0.16876936}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06578985, y: 0.13454008}
+  m_EdgeRadius: 0
 --- !u!1 &486695595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,15 +1322,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754255227}
-  m_LocalRotation: {x: -0, y: -0, z: -0.05283739, w: 0.99860317}
-  m_LocalPosition: {x: 1.91, y: 0.55, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.021741478, w: 0.99976367}
+  m_LocalPosition: {x: 1.912, y: 0.589, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113083900}
   m_Father: {fileID: 1019027557}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.058}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.492}
 --- !u!114 &1754255229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,46 +1376,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 738eaea3-4e77-4d52-911f-6ae91941991d
     m_ActionName: Player/Attack[/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7f9b38eb-bfd3-4470-bfb6-bcf9d71a501f
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c9a4bc02-3f89-4471-8b07-1dddef8edd0b
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2861c352-2142-44ac-a2bc-2d403852910a
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ab8dbd5-47d9-4257-ac44-c406d5888537
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2d906126-e6a1-4bb4-9693-19f9d5067239
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cedb7175-1c36-4f6b-a2ae-3a10cb8439b6
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb560330-a2a4-4e51-86b0-239c6ed8df86
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 28b1c185-67ef-465e-a658-b8ecfa01f4f1
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4a98b8f7-7ee1-4a67-8c8d-38ddce46f9ec
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f4ea31f1-5ebd-4873-9c14-b94d59f22a15
-    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1548,6 +1450,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5123613575615285608, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123613575615285608, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 130686780}
@@ -1555,9 +1461,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NewGameButton
       objectReference: {fileID: 0}
-    - target: {fileID: 5123613575766310531, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
+    - target: {fileID: 5123613575615285614, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123613575766310531, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5123613575795079859, guid: 4722ac75a2e787f4184b6a51724cb4d6, type: 3}
       propertyPath: m_Pivot.x
