@@ -1,29 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class Attack : MonoBehaviour
+public class WeakSpot : MonoBehaviour
 {
-    public Rigidbody2D knockback;
-    public Animator animator;
-    public GameObject horn;
+    public Rigidbody2D weakSpot;
 
-    private void Start()
-    {
-        animator = horn.GetComponent<Animator>();
-    }
-
-    public void Attack1(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            animator.Play("NewAttack");
-        }
-    }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (!col.gameObject.CompareTag("WeakSpot"))
+        if (!col.gameObject.CompareTag("Horn"))
             return;
         float impactStrength = 200f;
         // the collision point:
@@ -36,5 +21,4 @@ public class Attack : MonoBehaviour
 
         Debug.Log("ForceIsAdded");
     }
-
 }
