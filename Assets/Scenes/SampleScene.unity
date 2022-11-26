@@ -226,6 +226,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f4ea31f1-5ebd-4873-9c14-b94d59f22a15
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 51005529}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 738eaea3-4e77-4d52-911f-6ae91941991d
+    m_ActionName: Player/Attack[/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -245,6 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 51005530}
   speed: 8
+  animator: {fileID: 51005534}
+  player: {fileID: 51005527}
 --- !u!50 &51005530
 Rigidbody2D:
   serializedVersion: 4
@@ -400,6 +418,7 @@ GameObject:
   - component: {fileID: 130686774}
   - component: {fileID: 130686773}
   - component: {fileID: 130686772}
+  - component: {fileID: 130686778}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -488,6 +507,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a09e99ef-b259-4260-9f0b-093605a09db3
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 130686773}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 11f470bb-59a1-406b-a686-e41f9cb27a47
+    m_ActionName: Player/Attack[/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -507,6 +542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 130686774}
   speed: 8
+  animator: {fileID: 130686778}
+  player: {fileID: 130686771}
 --- !u!50 &130686774
 Rigidbody2D:
   serializedVersion: 4
@@ -616,7 +653,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130686771}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.19, y: -6.21, z: 0}
   m_LocalScale: {x: 4.1755, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -628,6 +665,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &130686778
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130686771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 402db7042ec55e34bbc3874f548ca854, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &224711527
 GameObject:
   m_ObjectHideFlags: 0
