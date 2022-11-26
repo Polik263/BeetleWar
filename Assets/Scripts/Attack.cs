@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Attack : MonoBehaviour
 {
-    public Rigidbody2D knockback;
     public Animator animator;
     public GameObject horn;
 
@@ -23,16 +22,16 @@ public class Attack : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (!col.gameObject.CompareTag("WeakSpot"))
+        if (!col.collider.CompareTag("WeakSpot"))
             return;
-        float impactStrength = 200f;
+        float impactStrength = 150f;
         // the collision point:
         Vector2 point = col.contacts[0].point;
         // Option A: Use the direction of the collision surface:
         Vector2 normal = col.contacts[0].normal;
         // Option B: you can also just always apply force upwards:
         normal = Vector2.up;
-        col.otherCollider.GetComponent<Rigidbody2D>().AddForceAtPosition(normal * impactStrength, point);
+        col.collider.GetComponentInParent<Rigidbody2D>().AddForceAtPosition(normal * impactStrength, point);
 
         Debug.Log("ForceIsAdded");
     }
