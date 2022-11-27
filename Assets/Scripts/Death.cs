@@ -27,8 +27,6 @@ public class Death : MonoBehaviour
         if (other.CompareTag("Horn"))
         {
             Debug.Log("Death");
-            UIDeathPrompt.SetActive(true);
-
             animator.Play("DeathAnimation");
         }
     }
