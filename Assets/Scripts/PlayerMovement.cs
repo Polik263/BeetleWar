@@ -8,18 +8,19 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 8f;
 
-    private float horizontal;
+    float horizontal;
 
     //public Animator animator;
 
     public GameObject player;
 
-    public bool gameOver;
+    //public bool gameOver;
 
     public GameObject gameOverScreen;
 
     private void Start()
     {
+        horizontal= 0;
         player = this.gameObject;
         rb = player.GetComponent<Rigidbody2D>();
         //gameOver = false;
@@ -28,7 +29,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, 0);
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+         horizontal = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.A)) 
+        {
+            horizontal = -1;
+        }
+
+        //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         // if(gameOverScreen.activeInHierarchy == true)
         // {
@@ -40,13 +53,13 @@ public class PlayerMovement : MonoBehaviour
         // }
     }
 
-    public void Move(InputAction.CallbackContext context)
-    {
-        // if (gameOver == false)
-        // {
-            horizontal = context.ReadValue<Vector2>().x;
-        //}
-    }
+    //public void Move(InputAction.CallbackContext context)
+    //{
+    //    // if (gameOver == false)
+    //    // {
+    //        horizontal = context.ReadValue<Vector2>().x;
+    //    //}
+    //}
 
     //public void Attack(InputAction.CallbackContext context)
     //{
