@@ -11,20 +11,27 @@ public class Death : MonoBehaviour
 {
 
     public int scene;
-    
+    public Animator animator;
+    public GameObject weakSpot;
     public GameObject UIDeathPrompt;
 
-    
-    // void OnTriggerEnter2D(Collider2D other)
-    //{
+
+    private void Start()
+    {
+        animator = weakSpot.GetComponent<Animator>();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
         
-    //    Debug.Log("Collision!");
-    //    if (other.CompareTag("Ground"))
-    //    {
-    //        Debug.Log("Ground Touched");
-    //        UIDeathPrompt.SetActive(true);
-    //    }
-    //}
+        if (other.CompareTag("Horn"))
+        {
+            Debug.Log("Death");
+            UIDeathPrompt.SetActive(true);
+
+            animator.Play("DeathAnimation");
+        }
+    }
 
     public void ActivateUI()
     {
