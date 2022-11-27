@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    [SerializeField] private float speed = 800f;
+    public float speed = 8f;
 
-    [SerializeField] private float horizontal;
+    float horizontal;
 
     //public Animator animator;
 
@@ -29,28 +29,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, 0);
+
         if (Input.GetKeyDown(KeyCode.D))
-            horizontal = 1;
+        {
+         horizontal = 1;
+        }
 
-         if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A)) 
+        {
             horizontal = -1;
+        }
 
-         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-             horizontal = 0;
+        //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-         transform.position += new Vector3(horizontal * speed, 0, 0);
-         //rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, 0);
-
-         //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
-         // if(gameOverScreen.activeInHierarchy == true)
-         // {
-         //     gameOver = true;
-         // }
-         // else
-         // {
-         //     gameOver = false;
-         // }
+        // if(gameOverScreen.activeInHierarchy == true)
+        // {
+        //     gameOver = true;
+        // }
+        // else
+        // {
+        //     gameOver = false;
+        // }
     }
 
     //public void Move(InputAction.CallbackContext context)
