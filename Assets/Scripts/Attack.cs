@@ -6,14 +6,14 @@ using UnityEngine.InputSystem;
 public class Attack : MonoBehaviour
 {
     public Animator animator;
-    public Animator enemyAnimator;
+    //public Animator enemyAnimator;
     public GameObject horn;
-    public GameObject enemy;
+    //public GameObject enemy;
 
     private void Start()
     {
         animator = horn.GetComponent<Animator>();
-        enemyAnimator = enemy.GetComponent<Animator>();
+        //enemyAnimator = enemy.GetComponent<Animator>();
     }
 
     public void Attack1(InputAction.CallbackContext context)
@@ -27,7 +27,7 @@ public class Attack : MonoBehaviour
     {
         if (!col.collider.CompareTag("WeakSpot"))
         {
-            enemyAnimator.Play("Death");
+      //      enemyAnimator.Play("Death");
 
             Debug.Log("Dead");
         }

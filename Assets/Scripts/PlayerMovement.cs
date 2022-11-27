@@ -65,4 +65,10 @@ public class PlayerMovement : MonoBehaviour
     //        animator.Play("AttackAnimation2");
     //    }
     //}
+
+
+    public void DisableMovement()
+    {
+        gameOver = true;
+    }
 }

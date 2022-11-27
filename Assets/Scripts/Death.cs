@@ -15,15 +15,20 @@ public class Death : MonoBehaviour
     public GameObject UIDeathPrompt;
 
     
-     void OnTriggerEnter2D(Collider2D other)
-    {
+    // void OnTriggerEnter2D(Collider2D other)
+    //{
         
-        Debug.Log("Collision!");
-        if (other.CompareTag("Ground"))
-        {
-            Debug.Log("Ground Touched");
-            UIDeathPrompt.SetActive(true);
-        }
+    //    Debug.Log("Collision!");
+    //    if (other.CompareTag("Ground"))
+    //    {
+    //        Debug.Log("Ground Touched");
+    //        UIDeathPrompt.SetActive(true);
+    //    }
+    //}
+
+    public void ActivateUI()
+    {
+        UIDeathPrompt.SetActive(true);
     }
 
      public void NewGameButton()
