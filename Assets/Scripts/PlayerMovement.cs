@@ -14,29 +14,46 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject player;
 
+    public bool gameOver;
+
+    public GameObject gameOverScreen;
+
     private void Start()
     {
+        gameOver = false;
         animator = player.GetComponent<Animator>();
     }
 
     private void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        if(gameOverScreen.activeInHierarchy == true)
+        {
+            gameOver = true;
+        }
+        else
+        {
+            gameOver = false;
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
-    }
-
-    public void Attack(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        if (gameOver == false)
         {
-            Debug.Log("Works");
-            animator.Play("NewAttack");
+            horizontal = context.ReadValue<Vector2>().x;
         }
     }
+
+    //public void Attack(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //    {
+    //        Debug.Log("Works");
+    //        animator.Play("NewAttack");
+    //    }
+    //}
 
     //public void Attack2(InputAction.CallbackContext context)
     //{
