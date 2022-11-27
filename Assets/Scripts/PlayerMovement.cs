@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        player = this.gameObject;
+        rb = player.GetComponent<Rigidbody2D>();
         gameOver = false;
         animator = player.GetComponent<Animator>();
     }
