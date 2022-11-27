@@ -9,28 +9,33 @@ using UnityEngine.UI;
 
 public class DeathP2 : MonoBehaviour
 {
-    private GameObject player;
+    [SerializeField] private GameObject player;
     public int scene;
-    public Animator animator;
+    //public Animator animator;
     private PlayerMovement _playerMovement;
+    //private Horn2 _horn;
     public GameObject weakSpot;
     public GameObject UIDeathPrompt;
 
 
     private void Start()
     {
-        player = this.gameObject;
-        animator = player.GetComponent<Animator>();
+        //player = this.gameObject;
+        //animator = player.GetComponent<Animator>();
         _playerMovement = player.GetComponent<PlayerMovement>();
+        //_horn = player.GetComponent<Horn2>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         _playerMovement.enabled = false;
+        //_horn.enabled = false;
         if (other.CompareTag("HornP1"))
         {
             Debug.Log("Death");
-            animator.Play("DeathAnimation");
+            Destroy(player.gameObject);
+            ActivateUI();
+            //animator.Play("DeathAnimation");
         }
     }
 

@@ -1625,8 +1625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802de37e78f6bca499376a96defd6480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   scene: 1
-  animator: {fileID: 0}
   weakSpot: {fileID: 0}
   UIDeathPrompt: {fileID: 933381777}
 --- !u!114 &625410609
@@ -1776,9 +1776,9 @@ GameObject:
   m_Component:
   - component: {fileID: 686345293}
   - component: {fileID: 686345294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: HornP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1897,6 +1897,8 @@ GameObject:
   - component: {fileID: 738496937}
   - component: {fileID: 738496938}
   - component: {fileID: 738496939}
+  - component: {fileID: 738496940}
+  - component: {fileID: 738496941}
   m_Layer: 0
   m_Name: Bust
   m_TagString: Untagged
@@ -1961,7 +1963,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08481c898cbdbc94c8aefed96fa9ff89, type: 3}
-  m_Color: {r: 0.375534, g: 0.8207547, b: 0.4224812, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -1987,6 +1989,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!58 &738496940
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738496936}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &738496941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738496936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802de37e78f6bca499376a96defd6480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1379743541}
+  scene: 2
+  weakSpot: {fileID: 738496936}
+  UIDeathPrompt: {fileID: 933381777}
 --- !u!1 &753984243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,9 +2132,9 @@ GameObject:
   m_Component:
   - component: {fileID: 903685341}
   - component: {fileID: 903685342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: HornP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2188,6 +2222,8 @@ GameObject:
   - component: {fileID: 1048216422}
   - component: {fileID: 1048216421}
   - component: {fileID: 1048216420}
+  - component: {fileID: 1048216423}
+  - component: {fileID: 1048216424}
   m_Layer: 0
   m_Name: Bust
   m_TagString: Untagged
@@ -2253,7 +2289,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08481c898cbdbc94c8aefed96fa9ff89, type: 3}
-  m_Color: {r: 0.375534, g: 0.8207547, b: 0.4224812, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -2278,6 +2314,38 @@ Transform:
   m_Father: {fileID: 1629351693}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1048216423
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048216419}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &1048216424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048216419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ba17278cc4626459e09a4657e337b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1629351687}
+  scene: 2
+  weakSpot: {fileID: 1048216419}
+  UIDeathPrompt: {fileID: 933381777}
 --- !u!1 &1053043851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,8 +2381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802de37e78f6bca499376a96defd6480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   scene: 1
-  animator: {fileID: 0}
   weakSpot: {fileID: 0}
   UIDeathPrompt: {fileID: 933381777}
 --- !u!114 &1053043853
@@ -2971,7 +3039,6 @@ GameObject:
   - component: {fileID: 1379743545}
   - component: {fileID: 1379743544}
   - component: {fileID: 1379743543}
-  - component: {fileID: 1379743547}
   m_Layer: 0
   m_Name: NewPlayer1
   m_TagString: Untagged
@@ -3005,7 +3072,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379743541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2b4ebc963704f3346a17d2cb2a0ae669, type: 2}
   m_CullingMode: 0
@@ -3105,22 +3172,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1379743547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379743541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802de37e78f6bca499376a96defd6480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: 0
-  animator: {fileID: 1379743543}
-  weakSpot: {fileID: 738496936}
-  UIDeathPrompt: {fileID: 933381777}
 --- !u!1 &1417619783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,7 +3585,6 @@ GameObject:
   - component: {fileID: 1629351691}
   - component: {fileID: 1629351690}
   - component: {fileID: 1629351689}
-  - component: {fileID: 1629351688}
   m_Layer: 0
   m_Name: NewPlayer2
   m_TagString: Untagged
@@ -3542,22 +3592,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1629351688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629351687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802de37e78f6bca499376a96defd6480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: 0
-  animator: {fileID: 1629351689}
-  weakSpot: {fileID: 1048216419}
-  UIDeathPrompt: {fileID: 933381777}
 --- !u!95 &1629351689
 Animator:
   serializedVersion: 4
@@ -3628,7 +3662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: bd14372a9f5318e45bde00927c6f4ca1, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: a53b3ae199b38154e93ee44d06e8aca8, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -3655,12 +3689,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: f6c773e1-239e-446a-87d1-f9aea91c6888
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionId: 80ca08ba-9dc2-4e21-ae93-e7a442a18cba
+    m_ActionName: Player/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 738eaea3-4e77-4d52-911f-6ae91941991d
-    m_ActionName: Player/Attack[/Keyboard/w]
+    m_ActionId: 11f470bb-59a1-406b-a686-e41f9cb27a47
+    m_ActionName: Player/Attack[/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3695,9 +3729,9 @@ GameObject:
   - component: {fileID: 1637320075}
   - component: {fileID: 1637320076}
   - component: {fileID: 1637320077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Horn
-  m_TagString: Untagged
+  m_TagString: HornP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3731,8 +3765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 150
-  bottomRotationClamp: 20
-  topRotationClamp: -15
+  bottomRotationClamp: 25
+  topRotationClamp: -25
 --- !u!60 &1637320077
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3853,9 +3887,9 @@ GameObject:
   - component: {fileID: 1693269640}
   - component: {fileID: 1693269642}
   - component: {fileID: 1693269641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Horn
-  m_TagString: Untagged
+  m_TagString: HornP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3889,8 +3923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 150
-  bottomRotationClamp: 20
-  topRotationClamp: -15
+  bottomRotationClamp: 25
+  topRotationClamp: -25
 --- !u!60 &1693269642
 PolygonCollider2D:
   m_ObjectHideFlags: 0
