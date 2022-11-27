@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class Death : MonoBehaviour
+public class DeathP2 : MonoBehaviour
 {
     private GameObject player;
     public int scene;
@@ -27,7 +27,7 @@ public class Death : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         _playerMovement.enabled = false;
-        if (other.CompareTag("Horn"))
+        if (other.CompareTag("HornP1"))
         {
             Debug.Log("Death");
             animator.Play("DeathAnimation");
