@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Horn : MonoBehaviour
+public class Horn2 : MonoBehaviour
 {
     public float rotationSpeed = 40f;
     public float bottomRotationClamp = 20;
@@ -13,11 +13,11 @@ public class Horn : MonoBehaviour
         Vector3 rotation = transform.localRotation.eulerAngles;
         rotation.z = (rotation.z + 360 + 180) % 360 - 180;
         Vector3 delta = Vector3.zero;
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             delta -= Vector3.forward;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             delta += Vector3.forward;
         }
