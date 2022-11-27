@@ -9,21 +9,24 @@ using UnityEngine.UI;
 
 public class Death : MonoBehaviour
 {
-
+    private GameObject player;
     public int scene;
     public Animator animator;
+    private PlayerMovement _playerMovement;
     public GameObject weakSpot;
     public GameObject UIDeathPrompt;
 
 
     private void Start()
     {
-        animator = weakSpot.GetComponent<Animator>();
+        player = this.gameObject;
+        animator = player.GetComponent<Animator>();
+        _playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
+        _playerMovement.enabled = false;
         if (other.CompareTag("Horn"))
         {
             Debug.Log("Death");
