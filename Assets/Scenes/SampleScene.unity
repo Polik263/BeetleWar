@@ -314,46 +314,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 738eaea3-4e77-4d52-911f-6ae91941991d
     m_ActionName: Player/Attack[/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7f9b38eb-bfd3-4470-bfb6-bcf9d71a501f
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c9a4bc02-3f89-4471-8b07-1dddef8edd0b
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2861c352-2142-44ac-a2bc-2d403852910a
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ab8dbd5-47d9-4257-ac44-c406d5888537
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2d906126-e6a1-4bb4-9693-19f9d5067239
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cedb7175-1c36-4f6b-a2ae-3a10cb8439b6
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb560330-a2a4-4e51-86b0-239c6ed8df86
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 28b1c185-67ef-465e-a658-b8ecfa01f4f1
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4a98b8f7-7ee1-4a67-8c8d-38ddce46f9ec
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f4ea31f1-5ebd-4873-9c14-b94d59f22a15
-    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -983,6 +943,8 @@ MonoBehaviour:
   speed: 8
   animator: {fileID: 0}
   player: {fileID: 625410605}
+  gameOver: 0
+  gameOverScreen: {fileID: 933381777}
 --- !u!50 &625410611
 Rigidbody2D:
   serializedVersion: 4
@@ -1074,6 +1036,7 @@ GameObject:
   - component: {fileID: 1053043852}
   - component: {fileID: 1053043859}
   - component: {fileID: 1053043858}
+  - component: {fileID: 1053043860}
   m_Layer: 7
   m_Name: PLayer1
   m_TagString: Untagged
@@ -1161,6 +1124,8 @@ MonoBehaviour:
   speed: 8
   animator: {fileID: 0}
   player: {fileID: 1053043851}
+  gameOver: 0
+  gameOverScreen: {fileID: 933381777}
 --- !u!50 &1053043855
 Rigidbody2D:
   serializedVersion: 4
@@ -1283,6 +1248,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28225708, y: 0.10282087}
   m_EdgeRadius: 0
+--- !u!95 &1053043860
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053043851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e7204408f11cdb4e8e4e57991fddf04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1249573994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1418,8 @@ MonoBehaviour:
   speed: 8
   animator: {fileID: 1249573997}
   player: {fileID: 1249573994}
+  gameOver: 0
+  gameOverScreen: {fileID: 0}
 --- !u!60 &1249574000
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1797,6 +1784,8 @@ MonoBehaviour:
   speed: 8
   animator: {fileID: 1473993171}
   player: {fileID: 1473993168}
+  gameOver: 0
+  gameOverScreen: {fileID: 0}
 --- !u!60 &1473993174
 PolygonCollider2D:
   m_ObjectHideFlags: 0
