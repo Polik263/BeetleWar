@@ -1693,8 +1693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 625410611}
   speed: 8
+  horizontal: 0
   player: {fileID: 625410605}
-  gameOver: 0
   gameOverScreen: {fileID: 0}
 --- !u!50 &625410611
 Rigidbody2D:
@@ -1865,7 +1865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &688258819
 Transform:
   m_ObjectHideFlags: 0
@@ -2381,8 +2381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1053043855}
   speed: 8
+  horizontal: 0
   player: {fileID: 1053043851}
-  gameOver: 0
   gameOverScreen: {fileID: 0}
 --- !u!50 &1053043855
 Rigidbody2D:
@@ -2654,8 +2654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 8
+  horizontal: 0
   player: {fileID: 1249573994}
-  gameOver: 0
   gameOverScreen: {fileID: 0}
 --- !u!60 &1249574000
 PolygonCollider2D:
@@ -2967,11 +2967,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379743542}
-  - component: {fileID: 1379743546}
-  - component: {fileID: 1379743545}
   - component: {fileID: 1379743544}
   - component: {fileID: 1379743543}
   - component: {fileID: 1379743547}
+  - component: {fileID: 1379743548}
   m_Layer: 0
   m_Name: NewPlayer1
   m_TagString: Untagged
@@ -2987,7 +2986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379743541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.966851, y: -5.26, z: -0.1890652}
+  m_LocalPosition: {x: -5.73, y: -5.26, z: -0.1890652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3010,7 +3009,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2b4ebc963704f3346a17d2cb2a0ae669, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -3038,73 +3037,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &1379743545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379743541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 256520f85ea088b4e921a94526e28d70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speed: 13
-  player: {fileID: 1379743541}
-  gameOver: 0
-  gameOverScreen: {fileID: 933381777}
---- !u!114 &1379743546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379743541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: bd14372a9f5318e45bde00927c6f4ca1, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1379743545}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f6c773e1-239e-446a-87d1-f9aea91c6888
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 738eaea3-4e77-4d52-911f-6ae91941991d
-    m_ActionName: Player/Attack[/Keyboard/w]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1379743547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,6 +3053,23 @@ MonoBehaviour:
   animator: {fileID: 1379743543}
   weakSpot: {fileID: 738496936}
   UIDeathPrompt: {fileID: 933381777}
+--- !u!114 &1379743548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379743541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256520f85ea088b4e921a94526e28d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1379743544}
+  speed: 0.01
+  horizontal: 1
+  player: {fileID: 1379743541}
+  gameOverScreen: {fileID: 933381777}
 --- !u!1 &1417619783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,8 +3302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 8
+  horizontal: 0
   player: {fileID: 1473993168}
-  gameOver: 0
   gameOverScreen: {fileID: 0}
 --- !u!60 &1473993174
 PolygonCollider2D:
@@ -3571,7 +3520,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 40bc679c33812d84b888886284848a80, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -3613,8 +3562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 13
+  horizontal: 0
   player: {fileID: 1629351687}
-  gameOver: 0
   gameOverScreen: {fileID: 933381777}
 --- !u!114 &1629351692
 MonoBehaviour:
@@ -4022,8 +3971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 13
+  horizontal: 0
   player: {fileID: 0}
-  gameOver: 0
   gameOverScreen: {fileID: 933381777}
 --- !u!114 &1720226816
 MonoBehaviour:
